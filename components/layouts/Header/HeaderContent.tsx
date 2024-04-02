@@ -61,7 +61,7 @@ export const HeaderContent = () => {
               window.open(`https://imperio.fitalmx.com/`);
             }}
           >
-            Crea tu testamento
+            Simulador virtual
           </Button>
         </Box>
       </Box>
