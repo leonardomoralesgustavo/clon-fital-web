@@ -20,20 +20,20 @@ export const SOCIALS: {
   {
     id: 1,
     name: "Facebook",
-    img: "/images/facebook.png",
+    img: "/images/facebook_white.png",
     path: "https://www.facebook.com/profile.php?id=100085882848917",
   },
-  { id: 2, name: "Linkedin", img: "/images/linkedin.png", path: "" },
+  { id: 2, name: "Linkedin", img: "/images/linkedin_white.png", path: "" },
   {
     id: 3,
     name: "Instagram",
-    img: "/images/instagram.png",
+    img: "/images/instagram_white.png",
     path: "https://www.instagram.com/fitalmx/",
   },
   {
     id: 4,
     name: "YouTube",
-    img: "/images/youtube.png",
+    img: "/images/youtube_white.png",
     path: "https://www.youtube.com/channel/UCTHNrpg-xqBZUQ-We_YFQ4A",
   },
 ];
@@ -54,14 +54,14 @@ export const HeaderMenu: FC<Props> = ({ open, setOpen }) => {
           <Box
             component={"source"}
             media="(max-width: 899px)"
-            srcSet="/images/fital_logo_white.png"
+            srcSet="/images/fitallogo.png"
             sx={{ height: "42px" }}
           />
           <Box
             component={"img"}
             alt="Fitalmx fideicomiso"
-            src="/images/fital_logo_black.png"
-            sx={{ height: { xs: "22px", sm: "25px", md: "30px", lg: "42px" } }}
+            src="/images/fitallogo.png"
+            sx={{ height: { xs: "22px", sm: "25px", md: "25px", lg: "25px" } }}
           />
         </Box>
         <Box component={"nav"} sx={styles.nav}>

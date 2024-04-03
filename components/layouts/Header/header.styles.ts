@@ -133,13 +133,14 @@ const styles: StylesTypes = {
   menuStyles: {
     link(condition) {
       return (theme) => ({
-        color: condition ? theme.palette.primary.main : "#707070",
+        color: condition ? theme.palette.primary.main : "white",
         fontWeight: "500",
       });
     },
     rootContainer: {
       display: "flex",
       px: 4,
+      backgroundColor: "black",
       py: 2,
       alignItems: "center",
     },
@@ -160,9 +161,9 @@ const styles: StylesTypes = {
       color: {
         xs: "white",
         sm: "white",
-        md: "#748099",
-        lg: "#748099",
-        xl: "#748099",
+        md: "white",
+        lg: "white",
+        xl: "white",
       },
       bgcolor: { xs: "transparent", sm: "transparent", md: "transparent" },
     },
