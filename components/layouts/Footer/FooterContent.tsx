@@ -58,7 +58,7 @@ export const FooterContent = () => {
           C.P. 03920, Alcaldia Benito Juárez, CDMX
         </Typography> */}
         <Typography variant="body1" sx={styles.commonText}>
-          marketing@fitalmx.com
+          puflea@fitalmx.com
         </Typography>
         <Typography variant="body1" sx={styles.commonText}>
           Lunes a Viernes de 9:00 a 18:00 horas
