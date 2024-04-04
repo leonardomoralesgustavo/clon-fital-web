@@ -6,7 +6,7 @@ import { HomeServices } from "./HomeServices";
 import { FeaturesSection } from "../CommonSections";
 import { HomeVideo } from "./HomeVideo";
 import { SecondDivider } from "@/components/ui/dividers";
-import { HomeImages } from "./HomeImages";
+import { HomeMission } from "./HomeMission";
 import { HomeEye } from "./HomeEye";
 import { HomeValues } from "./HomeValues";
 import { MainFooter } from "@/components/layouts/Footer";
@@ -15,9 +15,10 @@ export const HomePageContent = () => {
   return (
     <Box>
       <HomeVideo />
+      <HomeMission />
       <HomeEye />
       <HomeValues />
-      <MainFooter/>
+      <MainFooter />
       {/* <SecondDivider />
       <HomeImages/>
       <SecondDivider/>
