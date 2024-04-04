@@ -1,13 +1,10 @@
 import { Box, Button, Typography } from "@mui/material";
 import React from "react";
 import styleList from "./header.styles";
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-// import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 const { contentStyles: styles } = styleList;
 
@@ -86,7 +83,6 @@ export const HeaderContent = () => {
         }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        style={mySwiper}
       >
         <SwiperSlide>
           <Box

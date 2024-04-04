@@ -122,12 +122,8 @@ const styles: StylesTypes = {
   },
   main: {
     root: {
-      background: {
-        md: "none",
-        xs: "linear-gradient(112deg, rgba(186, 0, 255, 0.7) 0%, rgba(0, 44, 163, 0.7) 100%), no-repeat center center/180% url(/images/header_img.png)",
-      },
       minHeight: { md: "auto", xs: "70vh" },
-      pb: { md: 0, xs: 8 },
+      mb: -1,
     },
   },
   menuStyles: {

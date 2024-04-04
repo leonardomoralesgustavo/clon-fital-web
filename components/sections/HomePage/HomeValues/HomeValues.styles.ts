@@ -1,46 +1,47 @@
 import { SxProps } from "@mui/material";
 
 type Styles = {
-  iFrame: SxProps;
-  buttonContainer: SxProps;
-  play: SxProps;
-  videoContainer: SxProps;
-  playScreenContainer: SxProps;
+  main: {
+    root: SxProps;
+  };
+  content: {
+    root: SxProps;
+    commonText: SxProps;
+    titleText: SxProps;
+  };
 };
 
 const styles: Styles = {
-  iFrame: {
-    width: "85%",
-    height: {xl: "850px", lg: "750px", md: "650px", xs: "200px", sm: "400px"},
-    display: "block",
-    mx: "auto",
+  main: {
+    root: {
+      backgroundImage: `url("/images/hands.png")`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      width: "100%",
+      height: "80vh", // ajusta la altura según tus necesidades
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+    },
   },
-  videoContainer: {
-    position: "relative",
-  },
-  playScreenContainer: {
-    position: "absolute",
-    top: 0,
-    left: "50%",
-    transform: "translateX(-50%)",
-    width: "85%",
-    mx: "auto",
-    height: "100%",
-    bgcolor: "rgba(0,0,0,0.3)",
-    backdropFilter: "blur(7px)",
-  },
-  buttonContainer: {
-    mt: 10,
-    display: "flex",
-    justifyContent: "center",
-  },
-  play: {
-    width: {md: "300px", xs: "100px", sm: "200px"},
-    position: "absolute",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%,-50%)",
-    cursor: "pointer",
+  content: {
+    root: {
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "left",
+      alignItems: { xs: "center", lg: "start" },
+      width: "100%",
+      gap: 3,
+      ml: { lg: 10, xs: 0 },
+      mb: 4,
+    },
+    commonText: {
+      fontSize: "16px",
+      fontWeight: "200",
+      color: "white",
+      maxWidth: "50%",
+    },
+    titleText: { fontSize: "90px", color: "white" },
   },
 };
 
