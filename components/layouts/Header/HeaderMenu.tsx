@@ -38,7 +38,7 @@ export const SOCIALS: {
   {
     id: 4,
     name: "TikTok",
-    img: "/images/TikTok.png",
+    img: "/images/tiktok.png",
     path: "https://www.tiktok.com/@fitalmx",
   },
 ];
