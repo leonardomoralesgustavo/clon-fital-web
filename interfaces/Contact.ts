@@ -16,7 +16,7 @@ export type BaseResponseTypes<T = any> = {
 export const addContactService = async (data: AddContactBody) => {
   try {
     const response = await axios.post<BaseResponseTypes>(
-      `${process.env.BASE_URL}contact/save`,
+      `${process.env.BASE_URL}api/contact/save`,
       data
     );
     return response.data;
