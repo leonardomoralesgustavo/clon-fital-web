@@ -127,7 +127,7 @@ export const HeaderContent = () => {
                   window.open(`https://wallet.fitalmx.com/`);
                 }}
               >
-                Simulador Wallet
+                Ir a mi Wallet
               </Button>
             </Box>
           </Box>
@@ -197,7 +197,7 @@ export const HeaderContent = () => {
                   window.open(`https://wallet.fitalmx.com/`);
                 }}
               >
-                Simulador Wallet
+                Ir a mi Wallet
               </Button>
             </Box>
           </Box>
@@ -251,7 +251,7 @@ export const HeaderContent = () => {
                   window.open(`https://wallet.fitalmx.com/`);
                 }}
               >
-                Simulador Wallet
+                Ir a mi Wallet
               </Button>
             </Box>
           </Box>
