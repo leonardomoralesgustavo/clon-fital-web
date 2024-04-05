@@ -102,7 +102,15 @@ export const HeaderContent = () => {
               textAlign="center"
               color="white"
             >
-              Convierte Criptomonedas en Tu Propiedad
+              De Inversión a Patrimonio,
+            </Typography>
+            <Typography
+              variant="h4"
+              component="div"
+              textAlign="center"
+              color="white"
+            >
+              Convierte Criptomonedas
             </Typography>
             <Typography
               variant="h4"
@@ -116,10 +124,10 @@ export const HeaderContent = () => {
               <Button
                 variant="contained"
                 onClick={() => {
-                  window.open(`https://imperio.fitalmx.com/`);
+                  window.open(`https://wallet.fitalmx.com/`);
                 }}
               >
-                Simulador virtual
+                Simulador Wallet
               </Button>
             </Box>
           </Box>
@@ -166,14 +174,30 @@ export const HeaderContent = () => {
             >
               CREA TU HISTORIAL DE CRIPTOMONEDAS
             </Typography>
+            <Typography
+              variant="h6"
+              component="div"
+              textAlign="center"
+              color="white"
+            >
+              1ra wallet 100% mexicana
+            </Typography>
+            <Typography
+              variant="h6"
+              component="div"
+              textAlign="center"
+              color="white"
+            >
+              global de criptomonedas
+            </Typography>
             <Box sx={styles.buttonContainer}>
               <Button
                 variant="contained"
                 onClick={() => {
-                  window.open(`https://imperio.fitalmx.com/`);
+                  window.open(`https://wallet.fitalmx.com/`);
                 }}
               >
-                Simulador virtual
+                Simulador Wallet
               </Button>
             </Box>
           </Box>
@@ -182,6 +206,60 @@ export const HeaderContent = () => {
             height={"100vh"}
             width={"100%"}
             src="./images/wallet_purple.png"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Box
+            sx={{
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              textAlign: "center",
+              color: "white",
+              fontSize: "24px",
+            }}
+          >
+            <Typography
+              variant="h1"
+              component="div"
+              textAlign="center"
+              color="white"
+            >
+              PASO #2
+            </Typography>
+            <Typography
+              variant="h1"
+              component="div"
+              textAlign="center"
+              color="white"
+            >
+              ¡CREA TU IMPERIO!
+            </Typography>
+            <Typography
+              variant="h5"
+              component="div"
+              textAlign="center"
+              color="white"
+            >
+              solicita la simulación de tu crédito
+            </Typography>
+            <Box sx={styles.buttonContainer}>
+              <Button
+                variant="contained"
+                onClick={() => {
+                  window.open(`https://wallet.fitalmx.com/`);
+                }}
+              >
+                Simulador Wallet
+              </Button>
+            </Box>
+          </Box>
+          <Box
+            component={"img"}
+            height={"100vh"}
+            width={"100%"}
+            src="./images/houses.png"
           />
         </SwiperSlide>
       </Swiper>

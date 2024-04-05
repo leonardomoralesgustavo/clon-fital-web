@@ -21,9 +21,14 @@ export const SOCIALS: {
     id: 1,
     name: "Facebook",
     img: "/images/facebook_white.png",
-    path: "https://www.facebook.com/profile.php?id=100085882848917",
+    path: "https://www.facebook.com/fitalmx/",
   },
-  { id: 2, name: "Linkedin", img: "/images/linkedin_white.png", path: "" },
+  {
+    id: 2,
+    name: "Linkedin",
+    img: "/images/linkedin_white.png",
+    path: "https://www.linkedin.com/company/fital-mx/posts/?feedView=all",
+  },
   {
     id: 3,
     name: "Instagram",
@@ -32,9 +37,9 @@ export const SOCIALS: {
   },
   {
     id: 4,
-    name: "YouTube",
-    img: "/images/youtube_white.png",
-    path: "https://www.youtube.com/channel/UCTHNrpg-xqBZUQ-We_YFQ4A",
+    name: "TikTok",
+    img: "/images/TikTok.png",
+    path: "https://www.tiktok.com/@fitalmx",
   },
 ];
 type Props = {
