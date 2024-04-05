@@ -15,9 +15,14 @@ export const SOCIALS: {
     id: 1,
     img: "/images/facebook_white.png",
     name: "facebook",
-    path: "https://www.facebook.com/profile.php?id=100085882848917",
+    path: "https://www.facebook.com/fitalmx/",
   },
-  { id: 2, img: "/images/linkedin_white.png", name: "linkedin", path: "" },
+  {
+    id: 2,
+    img: "/images/linkedin_white.png",
+    name: "linkedin",
+    path: "https://www.linkedin.com/company/fital-mx/posts/?feedView=all",
+  },
   {
     id: 3,
     img: "/images/instagram_white.png",
@@ -26,9 +31,9 @@ export const SOCIALS: {
   },
   {
     id: 4,
-    img: "/images/youtube_white.png",
-    name: "youtube",
-    path: "https://www.youtube.com/channel/UCTHNrpg-xqBZUQ-We_YFQ4A",
+    img: "/images/tiktok.png",
+    name: "TikTok",
+    path: "https://www.tiktok.com/@fitalmx",
   },
 ];
 
