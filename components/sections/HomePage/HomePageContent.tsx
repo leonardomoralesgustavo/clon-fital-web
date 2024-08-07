@@ -19,17 +19,6 @@ export const HomePageContent = () => {
       <HomeEye />
       <HomeValues />
       <MainFooter />
-      {/* <SecondDivider />
-      <HomeImages/>
-      <SecondDivider/>
-      <HomeVideo />
-      <MainDivider />
-      <HomeAboutUs />
-      <MainDivider />
-      <HomeServices />
-      <MainDivider />
-      <FeaturesSection />
-      <MainDivider /> */}
     </Box>
   );
 };
