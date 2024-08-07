@@ -64,7 +64,7 @@ export const HeaderContent = () => {
               <Button
                 variant="contained"
                 onClick={() => {
-                  window.open(`https://imperio.fitalmx.com/`);
+                  window.open(`https://wallet.fitalmx.com/`);
                 }}
               >
                 Ir a mi Wallet
@@ -188,7 +188,7 @@ export const HeaderContent = () => {
               <Button
                 variant="contained"
                 onClick={() => {
-                  window.open(`https://wallet.fitalmx.com/`);
+                  window.open(`https://imperio.fitalmx.com/`);
                 }}
               >
                 Ir a mi Imperio
