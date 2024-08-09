@@ -6,7 +6,7 @@ export const HomeVideo = () => {
   const [play, setPlay] = useState();
 
   return (
-    <Box component={"section"}>
+    <Box component={"section"} bgcolor={"black"} p={4}>
       <Box
         component={"iframe"}
         src="https://www.youtube.com/embed/1IrmM7QCKgQ?si=yKOKLqYj1F3P4AiD"
