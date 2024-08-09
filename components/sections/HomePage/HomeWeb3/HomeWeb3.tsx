@@ -57,8 +57,8 @@ export const HomeWeb3 = () => {
               sx={{
                 ...styles.content.generalBox,
                 overflow: expandedIndex === index ? "visible" : "hidden",
-                transition: "padding 0.5s ease-in-out",
-                padding: expandedIndex === index ? "15px" : "8px",
+                transition: "padding 0.6s ease-in-out",
+                padding: expandedIndex === index ? "20px" : "2px",
                 height: expandedIndex === index ? "auto" : "100px",
               }}
               onClick={() => handleExpandClick(index)}

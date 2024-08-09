@@ -86,7 +86,7 @@ const styles: Styles = {
       display: "flex",
       flexDirection: "column",
       justifyContent: "center",
-      alignItems: "flex-start",
+      alignItems: { xs: "center", sm: "flex-start", md: "flex-start" },
       gap: 1,
     },
     contentBox: {
