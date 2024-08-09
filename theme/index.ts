@@ -98,6 +98,19 @@ const theme = createTheme({
           }),
         },
         {
+          props: { variant: "h4" },
+          style: ({ theme }) => ({
+            fontSize: "30px",
+            // fontWeight: "500",
+            [theme.breakpoints.between("md", "lg")]: {
+              fontSize: "26px",
+            },
+            [theme.breakpoints.down("md")]: {
+              fontSize: "22px",
+            },
+          }),
+        },
+        {
           props: { variant: "body1" },
           style({ theme }) {
             return {

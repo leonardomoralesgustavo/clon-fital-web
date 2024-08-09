@@ -9,204 +9,200 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 const { contentStyles: styles } = styleList;
 
 export const HeaderContent = () => {
+  const imageSrcSlider1 = {
+    xs: "./images/unomobile.png",
+    md: "./images/btc_box.png",
+    lg: "./images/btc_box.png",
+  };
+  const imageSrcSlider2 = {
+    xs: "./images/dosmobile.png",
+    md: "./images/wallet_purple.png",
+    lg: "./images/wallet_purple.png",
+  };
+  const imageSrcSlider3 = {
+    xs: "./images/tresmobile.png",
+    md: "./images/houses.png",
+    lg: "./images/houses.png",
+  };
   return (
-    <>
-      <Swiper
-        spaceBetween={30}
-        centeredSlides={true}
-        autoplay={{
-          delay: 3500,
-          disableOnInteraction: false,
-        }}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
-        modules={[Autoplay, Pagination, Navigation]}
-      >
-        <SwiperSlide>
-          <Box
-            sx={{
-              position: "absolute",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              textAlign: "center",
-              color: "white",
-              fontSize: "24px",
-            }}
+    <Swiper
+      spaceBetween={30}
+      centeredSlides={true}
+      autoplay={{
+        delay: 5000,
+        disableOnInteraction: false,
+      }}
+      pagination={{
+        clickable: true,
+      }}
+      navigation={true}
+      modules={[Autoplay, Pagination, Navigation]}
+    >
+      <SwiperSlide>
+        <Box
+          sx={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            textAlign: "center",
+            color: "white",
+            fontSize: "24px",
+          }}
+        >
+          <Typography
+            variant="h4"
+            component="div"
+            textAlign="center"
+            color="white"
+            fontWeight={400}
           >
-            <Typography
-              variant="h4"
-              component="div"
-              textAlign="center"
-              color="white"
+            ¿Qué tan <span style={{ fontWeight: 700 }}>importante</span> es para
+            ti <span style={{ fontWeight: 700 }}>modernizar</span> la forma en
+            que gestionas y comercializas tus{" "}
+            <span style={{ fontWeight: 700 }}>inmuebles</span>, convirtiéndolos
+            en{" "}
+            <span style={{ fontWeight: 700 }}>
+              tokens digitales seguros y rastreables
+            </span>
+            ?
+          </Typography>
+          <Box sx={styles.buttonContainer}>
+            <Button
+              variant="contained"
+              onClick={() => {
+                window.open(`https://wallet.fitalmx.com/`);
+              }}
             >
-              De Inversión a Patrimonio,
-            </Typography>
-            <Typography
-              variant="h4"
-              component="div"
-              textAlign="center"
-              color="white"
-            >
-              Convierte Criptomonedas
-            </Typography>
-            <Typography
-              variant="h4"
-              component="div"
-              textAlign="center"
-              color="white"
-            >
-              en Tu Propiedad
-            </Typography>
-            <Box sx={styles.buttonContainer}>
-              <Button
-                variant="contained"
-                onClick={() => {
-                  window.open(`https://wallet.fitalmx.com/`);
-                }}
-              >
-                Ir a mi Wallet
-              </Button>
-            </Box>
+              Quiero tokenizar
+            </Button>
           </Box>
-          <Box
-            component={"img"}
-            height={"100vh"}
-            width={"100%"}
-            src="./images/btc_box.png"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Box
-            sx={{
-              position: "absolute",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              textAlign: "center",
-              color: "white",
-              fontSize: "24px",
-            }}
+        </Box>
+        <Box
+          component={"img"}
+          height={"100vh"}
+          width={"100%"}
+          sx={{
+            content: {
+              xs: `url(${imageSrcSlider1.xs})`,
+              md: `url(${imageSrcSlider1.md})`,
+              lg: `url(${imageSrcSlider1.lg})`,
+            },
+          }}
+        />
+      </SwiperSlide>
+      <SwiperSlide>
+        <Box
+          sx={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            textAlign: "center",
+            color: "white",
+            fontSize: "24px",
+          }}
+        >
+          <Typography
+            variant="h4"
+            component="div"
+            textAlign="center"
+            color="white"
+            fontWeight={400}
           >
-            <Typography
-              variant="h1"
-              component="div"
-              textAlign="center"
-              color="white"
-            >
-              PASO #1
-            </Typography>
-            <Typography
-              variant="h4"
-              component="div"
-              textAlign="center"
-              color="white"
-            >
-              ACTIVA TU WALLET Y
-            </Typography>
-            <Typography
-              variant="h4"
-              component="div"
-              textAlign="center"
-              color="white"
-            >
-              CREA TU HISTORIAL DE CRIPTOMONEDAS
-            </Typography>
-            <Typography
-              variant="h6"
-              component="div"
-              textAlign="center"
-              color="white"
-            >
-              1ra wallet 100% mexicana
-            </Typography>
-            <Typography
-              variant="h6"
-              component="div"
-              textAlign="center"
-              color="white"
-            >
-              global de criptomonedas
-            </Typography>
-            <Box sx={styles.buttonContainer}>
-              <Button
-                variant="contained"
-                onClick={() => {
-                  window.open(`https://wallet.fitalmx.com/`);
-                }}
-              >
-                Ir a mi Wallet
-              </Button>
-            </Box>
-          </Box>
-          <Box
-            component={"img"}
-            height={"100vh"}
-            width={"100%"}
-            src="./images/wallet_purple.png"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Box
-            sx={{
-              position: "absolute",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              textAlign: "center",
-              color: "white",
-              fontSize: "24px",
-            }}
+            Comenzó la{" "}
+            <span style={{ fontWeight: 700 }}>
+              evolución de la web autónoma
+            </span>
+            , todo esto basado en{" "}
+            <span style={{ fontWeight: 700 }}>blockchain</span>.
+          </Typography>
+          <Typography
+            variant="h6"
+            component="div"
+            textAlign="center"
+            color="white"
           >
-            <Typography
-              variant="h1"
-              component="div"
-              textAlign="center"
-              color="white"
+            1ra wallet 100% mexicana
+          </Typography>
+          <Box sx={styles.buttonContainer}>
+            <Button
+              variant="contained"
+              onClick={() => {
+                window.open(`https://wallet.fitalmx.com/`);
+              }}
             >
-              PASO #2
-            </Typography>
-            <Typography
-              variant="h1"
-              component="div"
-              textAlign="center"
-              color="white"
-            >
-              ¡CREA TU IMPERIO!
-            </Typography>
-            <Typography
-              variant="h5"
-              component="div"
-              textAlign="center"
-              color="white"
-            >
-              solicita la simulación de tu crédito
-            </Typography>
-            <Box sx={styles.buttonContainer}>
-              <Button
-                variant="contained"
-                onClick={() => {
-                  window.open(`https://imperio.fitalmx.com/`);
-                }}
-              >
-                Ir a mi Imperio
-              </Button>
-            </Box>
+              Ir a mi Wallet
+            </Button>
           </Box>
-          <Box
-            component={"img"}
-            height={"100vh"}
-            width={"100%"}
-            src="./images/houses.png"
-          />
-        </SwiperSlide>
-      </Swiper>
-    </>
+        </Box>
+        <Box
+          component={"img"}
+          height={"100vh"}
+          width={"100%"}
+          sx={{
+            content: {
+              xs: `url(${imageSrcSlider2.xs})`,
+              md: `url(${imageSrcSlider2.md})`,
+              lg: `url(${imageSrcSlider2.lg})`,
+            },
+          }}
+        />
+      </SwiperSlide>
+      <SwiperSlide>
+        <Box
+          sx={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            textAlign: "center",
+            color: "white",
+            fontSize: "24px",
+          }}
+        >
+          <Typography
+            variant="h4"
+            component="div"
+            textAlign="center"
+            color="white"
+            fontWeight={400}
+          >
+            <span style={{ fontWeight: 700 }}>FITAL</span> te ofrece una{" "}
+            <span style={{ fontWeight: 700 }}>
+              plataforma de inversiones regulada y segura
+            </span>
+            . Accede a nuestra plataforma de inversiones y empieza a
+            <span style={{ fontWeight: 700 }}>
+              {" "}
+              generar ganancias desde hoy
+            </span>
+            .
+          </Typography>
+          <Box sx={styles.buttonContainer}>
+            <Button
+              variant="contained"
+              onClick={() => {
+                window.open(`https://imperio.fitalmx.com/`);
+              }}
+            >
+              Quiero invertir
+            </Button>
+          </Box>
+        </Box>
+        <Box
+          component={"img"}
+          height={"100vh"}
+          width={"100%"}
+          sx={{
+            content: {
+              xs: `url(${imageSrcSlider3.xs})`,
+              md: `url(${imageSrcSlider3.md})`,
+              lg: `url(${imageSrcSlider3.lg})`,
+            },
+          }}
+        />
+      </SwiperSlide>
+    </Swiper>
   );
-};
-
-const mySwiper = {
-  // height: "900px"
 };

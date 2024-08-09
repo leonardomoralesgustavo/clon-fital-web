@@ -16,11 +16,12 @@ type Styles = {
 const styles: Styles = {
   main: {
     root: {
-      backgroundImage: `url("/images/purple.png")`,
+      // backgroundImage: `url("/images/purple.png")`,
       // background: {
       //   md: "no-repeat right center/50% url(/images/bg_binary.png), linear-gradient(112deg, #BA00FF 0%, #002CA3 100%)",
       //   xs: "no-repeat center center/300% url(/images/bg_binary.png), linear-gradient(112deg, #BA00FF 0%, #002CA3 100%)",
       // },
+      bgcolor: "black",
       px: { lg: "128px", md: "100px", xs: 8 },
       py: "98px",
     },

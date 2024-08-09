@@ -9,7 +9,7 @@ import { ModalContact } from "@/components/modales";
 const { menuStyles: styles } = styleList;
 const LINKS: { id: number; link: string; path: string }[] = [
   { id: 1, link: "Inicio", path: "/" },
-  { id: 2, link: "Nosotros", path: "/testament" },
+  // { id: 2, link: "Nosotros", path: "/testament" },
 ];
 export const SOCIALS: {
   id: number;

@@ -1,7 +1,9 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Button, TextField, Typography } from "@mui/material";
 import React from "react";
 import styleList from "./Footer.styles";
 import { useRouter } from "next/router";
+import { addContactService } from "@/interfaces";
+import { useTemporalMsg } from "@/hooks";
 
 const { content: styles } = styleList;
 
@@ -40,6 +42,24 @@ export const SOCIALS: {
 export const FooterContent = () => {
   const router = useRouter();
   const { pathname } = router;
+  const [msg, setMsg, initMsg] = useTemporalMsg(4000);
+
+  const handleSubmit = async (event: any) => {
+    event.preventDefault();
+
+    const data = await addContactService({
+      name: event.target.name.value,
+      last_name: event.target.lastName.value,
+      phone: event.target.phone.value,
+      email: event.target.email.value,
+    });
+    if (!data.success) {
+      setMsg({ text: data.errors![0], type: "error" });
+    } else {
+      // onClose();
+      window.open("https://fitalmx.com/thank_you", "_self");
+    }
+  };
 
   return (
     <Box sx={styles.root}>
@@ -53,15 +73,6 @@ export const FooterContent = () => {
         <Typography variant="body1" sx={styles.commonText} mb={5}>
           CIUDAD DE MÉXICO.
         </Typography>
-        {/* <Typography variant="body1" sx={styles.commonText}>
-          Avenida Insurgentes Sur No. 1458 Piso 12,
-        </Typography>
-        <Typography variant="body1" sx={styles.commonText}>
-          Colonia Actipan,
-        </Typography>
-        <Typography variant="body1" mb={5} sx={styles.commonText}>
-          C.P. 03920, Alcaldia Benito Juárez, CDMX
-        </Typography> */}
         <Typography variant="body1" sx={styles.commonText}>
           puflea@fitalmx.com
         </Typography>
@@ -75,31 +86,175 @@ export const FooterContent = () => {
           WhatsApp: 5578874806
         </Typography>
       </Box>
-      <Box sx={styles.responsiveFlexContainer(true)}>
-        <Typography
-          variant="body1"
-          sx={styles.link}
-          onClick={() => {
-            if (pathname == "/") {
-              window.scrollTo({ behavior: "smooth", top: 600 });
-              return;
-            }
-            router.push("/");
-            setTimeout(() => {
-              window.scrollTo({ behavior: "smooth", top: 600 });
-            }, 500);
-          }}
-        >
-          Regulación
-        </Typography>
-        <Typography variant="body1" sx={styles.link}>
-          Aviso de privacidad
-        </Typography>
-        <Typography variant="body1" sx={styles.link}>
-          Costos y comisiones
-        </Typography>
+      <Box>
+        <>
+          <Box onSubmit={handleSubmit} component="form" alignItems={"center"}>
+            <Typography
+              textAlign={"center"}
+              component={"h1"}
+              fontSize={"20px"}
+              fontWeight={700}
+              mb={2}
+              color={"white"}
+            >
+              Contáctanos
+            </Typography>
+            <TextField
+              name="name"
+              label=""
+              placeholder="Nombre"
+              type="text"
+              required
+              InputProps={{
+                style: { color: "black", backgroundColor: "white" },
+              }}
+              sx={{
+                width: "100%",
+                display: "flex",
+                alignItems: "left",
+                color: "white",
+                mb: 1,
+                flexDirection: "column",
+                "& .MuiOutlinedInput-root": {
+                  "& fieldset": {
+                    borderColor: "white",
+                  },
+                  "&:hover fieldset": {
+                    borderColor: "gray",
+                  },
+                  "&.Mui-focused fieldset": {
+                    borderColor: "yourFocusedBorderColor",
+                  },
+                },
+              }}
+            />
+            <TextField
+              name="lastName"
+              label=""
+              placeholder="Apellido"
+              type="text"
+              required
+              InputProps={{
+                style: { color: "black", backgroundColor: "white" },
+              }}
+              sx={{
+                width: "100%",
+                display: "flex",
+                alignItems: "left",
+                color: "white",
+                mb: 1,
+                flexDirection: "column",
+                "& .MuiOutlinedInput-root": {
+                  "& fieldset": {
+                    borderColor: "white",
+                  },
+                  "&:hover fieldset": {
+                    borderColor: "gray",
+                  },
+                  "&.Mui-focused fieldset": {
+                    borderColor: "yourFocusedBorderColor",
+                  },
+                },
+              }}
+            />
+            <TextField
+              name="phone"
+              label=""
+              placeholder="Teléfono"
+              type="text"
+              required
+              InputProps={{
+                style: { color: "black", backgroundColor: "white" },
+              }}
+              sx={{
+                width: "100%",
+                display: "flex",
+                alignItems: "left",
+                color: "white",
+                mb: 1,
+                flexDirection: "column",
+                "& .MuiOutlinedInput-root": {
+                  "& fieldset": {
+                    borderColor: "white",
+                  },
+                  "&:hover fieldset": {
+                    borderColor: "gray",
+                  },
+                  "&.Mui-focused fieldset": {
+                    borderColor: "yourFocusedBorderColor",
+                  },
+                },
+              }}
+            />
+            <TextField
+              name="email"
+              label=""
+              placeholder="Correo"
+              type="text"
+              required
+              InputProps={{
+                style: { color: "black", backgroundColor: "white" },
+              }}
+              sx={{
+                width: "100%",
+                display: "flex",
+                alignItems: "left",
+                color: "white",
+                flexDirection: "column",
+                "& .MuiOutlinedInput-root": {
+                  "& fieldset": {
+                    borderColor: "white",
+                  },
+                  "&:hover fieldset": {
+                    borderColor: "gray",
+                  },
+                  "&.Mui-focused fieldset": {
+                    borderColor: "yourFocusedBorderColor",
+                  },
+                },
+              }}
+            />
+            <Typography
+              sx={{
+                textAlign: "center",
+                color: msg.type === "error" ? "crimson" : "green",
+                mt: 2,
+              }}
+            >
+              {msg.text}
+            </Typography>
+            <Button
+              type="submit"
+              sx={{
+                width: "100%",
+                height: "50px",
+                bgcolor: "#B100FF",
+                color: "white",
+                mt: 2,
+              }}
+            >
+              Enviar
+            </Button>
+          </Box>
+        </>
       </Box>
       <Box sx={styles.responsiveFlexContainer(false)}>
+        <Box
+          display={"flex"}
+          justifyContent={"center"}
+          alignItems={"center"}
+          sx={{ display: { xs: "none", sm: "none", md: "none", lg: "block" } }}
+        >
+          <Typography
+            textAlign={"center"}
+            color={"white"}
+            width={"250px"}
+            mb={3}
+          >
+            Síguenos y mantente informado de nuestras últimas noticias y
+            comunicados en nuestras redes sociales.
+          </Typography>
+        </Box>
         {SOCIALS.map(({ id, img, name, path }) => (
           <Box
             key={id}
