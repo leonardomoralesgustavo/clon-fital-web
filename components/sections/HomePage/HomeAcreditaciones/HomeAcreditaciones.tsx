@@ -34,9 +34,9 @@ export const HomeAcreditaciones = () => {
           justifyContent={"space-evenly"}
           alignItems={"center"}
         >
-          {images.map((data) => (
+          {images.map((data, index) => (
             <Box
-              key={data.img}
+              key={index}
               sx={styles.content.img}
               component={"img"}
               src={`${data.img}`}
